@@ -1,23 +1,22 @@
 // Copyright © 2023 - Present Marakarka (Viktor K.)
 
+const el = [0, 0, 0];
+const factorials = [1, 1];
+
+let f = 0;
 let count = 0;
 
 mid.toString().split('').forEach((digit) => {
     count += parseInt(digit);
 });
 
-const el = [0, 0, 0];
 el[0] = mid % 1000;
 el[1] = Math.floor((mid % 1000000 - el[0]) / 1000);
 el[2] = Math.floor((mid - el[1] - el[0]) / 1000000);
 
-const factorials = [1, 1];
-
 for (let i = 2; i < 4; i++) {
     factorials.push(factorials[i - 1] * i);
 }
-
-let f = 0;
 
 for (let i = 1; i < mid.toString().length; i += 2) {
     f += i;
