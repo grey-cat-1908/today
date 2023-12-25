@@ -39,7 +39,7 @@ function num2permutation(k, n) {
                 cur_free += 1;
 
                 if (cur_free === already_was + 1) {
-                    permutation[i - 1] = String(el[j - 1] % 255);
+                    permutation[i - 1] = String(el[j - 1] % 256);
                     was[j] = true;
                 }
             }
