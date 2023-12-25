@@ -1,6 +1,4 @@
-const now = new Date();
-const midnightUTC = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()));
-const mid = Math.floor(midnightUTC.getTime() / 10000);
+// Copyright © 2023 - Present Marakarka (Viktor K.)
 
 let count = 0;
 

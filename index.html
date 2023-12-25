@@ -8,11 +8,51 @@
   <link rel="manifest" href="/site.webmanifest">
   <title>Цвет дня</title>
   <style>
-    html, body {margin: 0; height: 100%; overflow: hidden; overflow-y: hidden; font-size: 0}
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      overflow-y: hidden;
+      overflow-x: hidden;
+    }
+    
+    .parent {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      overflow: auto;   
+  }
+  
+  .block {
+      margin: auto;
+      background: #1E1F22;
+      width: 400px;
+      border-radius: 3%;
+      
+      h1 {
+          display: block;
+          border: none;
+          text-align: center;
+          font-size: 120px;
+          padding: 5px 0 5px;
+      }
+  }
   </style>
 </head>
 <body>
-    <div id="color" style="color: transparent"></div>
+    <div id="color" style="color: transparent; font-size: 0;"></div>
+    <div class="parent">
+      <div class="block" id="emoji-copy" onclick="copyEmojiToClipboard()">
+        <h1 id="emoji">&#129297;</h1>
+      </div>
+    </div>
+    <script src="constants.js"></script>
     <script src="color.js"></script>
+    <script src="emoji.js"></script>
 </body>
 </html>
