@@ -24,7 +24,7 @@
 
 $$cet(t) = \left\lfloor 23 \cdot \left(3 \sqrt[3]{t} + 0.7 \cdot \log(t + 5) \cdot 13 + \frac{t \bmod 86400}{86400} + 11 \cdot \log_2(t) + 17 \cdot \sin\left(\frac{2 \pi t}{86400}\right) + 2 \cdot \cos\left(\frac{2 \pi t}{86400}\right) + \left\lfloor \frac{t}{86400} \right\rfloor^2\right) \right\rfloor \bmod 4$$
 
-$$cev(t) = tr[cet(t)] + \left\lfloor 17 * (3 \cdot sin(2 * pi * t / o.7) + 5 * (3 \sqrt[3]{t} + 13 \cdot \log(t + 11)) \right\rfloor \bmod cet(t)$$
+$$cev(t) = tr[cet(t)] + \left\lfloor 17 * (3 \cdot sin(2 * pi * t / o.7) + 5 * (3 \sqrt[3]{t} + 13 \cdot \log(t + 11)) \right\rfloor \bmod ts[cet(t)]$$
 
 и выводится пользователю, конечно, эмодзи в формате: `&#{cev(t)};`.
 
