@@ -8,7 +8,7 @@ function calculateEmojiType(timestamp, T, A, B, C, D, E, F, G, H, I) {
                     F * Math.sin(2 * Math.PI * timestamp / T) +
                     G * Math.cos(2 * Math.PI * timestamp / T) +
                     H * Math.pow(Math.floor(timestamp / T), 2)) * I;
-    return Math.floor(result) % 4;
+    return Math.floor(result) % 5;
 }
 
 function calculateEmojiValue(timestamp, A, B, C, D, E, F, l) {
