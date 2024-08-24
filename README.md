@@ -7,10 +7,10 @@
 Вы можете спокойно взять мои "гениальные" наработки в файлах этого проекта, но только не забудьте, пожалуйста, отметить меня.
 
 ## Translation and better article
-[Click here!](https://arbuz.icu/blog/today-project/)
+[Click here!](https://mrkrk.me/blog/today-project/)
 
 ## А как потестить?
-Все просто. [Кликай сюда](https://today.arbuz.icu/)
+Все просто. [Кликай сюда](https://today.mrkrk.me/)
 
 ## Формулы!!!!
 
