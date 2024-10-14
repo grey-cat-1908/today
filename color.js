@@ -1,4 +1,6 @@
-// Copyright © 2023 - Present Marakarka (Viktor K.)
+// Copyright © 2023 - Present mrkrk (Viktor K.)
+//
+// https://today.mrkrk.me/
 
 const el = [0, 0, 0];
 const factorials = [1, 1];

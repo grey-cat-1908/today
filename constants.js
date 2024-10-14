@@ -1,4 +1,6 @@
-// Copyright © 2023 - Present Marakarka (Viktor K.)
+// Copyright © 2023 - Present mrkrk (Viktor K.)
+//
+// https://today.mrkrk.me/
 
 const now = new Date();
 const midnightUTC = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()));

@@ -1,40 +1,9 @@
 // Copyright © 2024 - Present mrkrk (Viktor K.)
 // 
 // Based on Tupper's self-referential formula
-// ...and a strange constant generation algorhythm (as always, yeah)
-
-function modularPow(base, exp, mod) {
-    let res = 1;
-    base %= mod;
-    while (exp > 0) {
-        if (exp & 1) {
-            res = (res * base) % mod;
-        }
-        exp >>= 1;
-        base = (base * base) % mod;
-    }
-    return res;
-}
-
-function toBitArray(n) {
-    return n.toString(2);
-}
-
-function generateStrangeConstant(k) {
-    const primeCandidate = Math.floor(Math.log(k + 3) * Math.E * 1e5);
-    let strangeConstant = modularPow(primeCandidate, k % 13 + 2, 2 ** 128 - 189);
-    strangeConstant ^= Math.floor(Math.sin(k * primeCandidate) * 1e5);
-    return strangeConstant;
-}
-
-function irrationalConstant(k) {
-    const irrationalBase = Math.floor((Math.PI * Math.E + Math.sqrt(2)) * 1e6);
-    return (irrationalBase + k * Math.floor(Math.cosh(k % 10) * 1e4)) % (2 ** 128);
-}
-
-function factorial(n) {
-    return n <= 1 ? 1 : n * factorial(n - 1);
-}
+// ...and a wierd constants generation algorithm (as always, yeah)
+//
+// https://today.mrkrk.me/image/
 
 function obscureTransformation(k) {
     const r = (k << 4) ^ (k >> 6);
@@ -85,7 +54,9 @@ function generateImage() {
     let result = obscureTransformation(k);
     result = result.padStart(1802, '0');
 
-    const lists = Array.from({ length: 17 }, () => []);
+    const lists = Array.from({
+        length: 17
+    }, () => []);
     for (let x = 0; x < 1802; x++) {
         lists[x % 17].push(result[x]);
     }
@@ -98,7 +69,10 @@ function generateImage() {
     const canvasWidth = window.innerWidth * 0.8;
     const canvasHeight = window.innerHeight * 0.5;
 
-    let minX = 106, minY = 17, maxX = 0, maxY = 0;
+    let minX = 106,
+        minY = 17,
+        maxX = 0,
+        maxY = 0;
     for (let y = 0; y < 17; y++) {
         for (let x = 0; x < 106; x++) {
             if (lists[y][x] === '1') {
@@ -130,6 +104,22 @@ function generateImage() {
         }
     }
 }
+
+function copyImage() {
+    const canvas = document.getElementById('imageCanvas');
+    canvas.toBlob(function(blob) {
+        try {
+            navigator.clipboard.write([
+                new ClipboardItem({
+                    'image/png': blob
+                })
+            ]);
+        } catch (error) {
+            // pass
+        }
+    }, 'image/png');
+}
+
 
 window.onload = generateImage;
 window.onresize = generateImage;

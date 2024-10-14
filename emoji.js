@@ -1,4 +1,6 @@
-// Copyright © 2023 - Present Marakarka (Viktor K.)
+// Copyright © 2023 - Present mrkrk (Viktor K.)
+//
+// https://today.mrkrk.me/
 
 function calculateEmojiType(timestamp, T, A, B, C, D, E, F, G, H, I) {
     const result = (A * Math.pow(timestamp, 1/3) +
