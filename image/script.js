@@ -48,7 +48,7 @@ function obscureTransformation(k) {
 }
 
 function generateImage() {
-    const now = new Date();
+    const now = new Date("17 October, 00:00:00");
     const midnightUTC = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()));
     const k = Math.floor(midnightUTC.getTime() / 10000);
     let result = obscureTransformation(k);
