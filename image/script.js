@@ -66,8 +66,8 @@ function generateImage() {
     ctx.imageSmoothingQuality = 'high';
     ctx.imageSmoothingEnabled = true;
 
-    const canvasWidth = window.innerWidth * 0.8;
-    const canvasHeight = window.innerHeight * 0.5;
+    const canvasWidth = window.innerWidth * 0.85;
+    const canvasHeight = window.innerHeight;
 
     let minX = 106,
         minY = 17,
@@ -84,7 +84,7 @@ function generateImage() {
         }
     }
 
-    const pixelSize = Math.min(canvasWidth / (maxX - minX), canvasHeight / (maxY - minY));
+    const pixelSize = Math.ceil(Math.min(canvasWidth / (maxX - minX), canvasHeight / (maxY - minY)));
     canvas.width = (maxX - minX) * pixelSize;
     canvas.height = (maxY - minY) * pixelSize;
 
