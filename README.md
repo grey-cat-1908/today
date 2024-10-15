@@ -15,7 +15,7 @@ Based on today's midnight timestamp, works locally on the client side.
 
 * [Emoji + Color](https://today.mrkrk.me/)
 
-* [Image](https://today.mrkrk.me/image)
+* [Pixel Art](https://today.mrkrk.me/art)
 
 
 ## The purpose of this project
