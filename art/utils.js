@@ -3,7 +3,7 @@
 // Based on Tupper's self-referential formula
 // ...and a wierd constants generation algorithm (as always, yeah)
 //
-// https://today.mrkrk.me/image/
+// https://today.mrkrk.me/art/
 
 function modularPow(base, exp, mod) {
     // https://en.wikipedia.org/wiki/Modular_exponentiation
