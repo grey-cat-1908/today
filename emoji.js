@@ -1,5 +1,7 @@
 // Copyright © 2023 - Present mrkrk (Viktor K.)
 //
+// More info: https://github.com/grey-cat-1908/today/blob/master/v1.md
+//
 // https://today.mrkrk.me/
 
 function calculateEmojiType(timestamp, T, A, B, C, D, E, F, G, H, I) {
